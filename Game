@@ -13,7 +13,7 @@ def game():
 
 #Corrects User if user mistypes, until they put in one of the options
         while user != 'rock' and user != 'paper' and user != 'scissors':
-            user = input("Enter either 'rock', 'paper', 'scissors'")
+            user = input("Enter either 'rock', 'paper', or 'scissors' ")
 
 #Computer Choice
         comp = random.choice(['rock', 'paper', 'scissors'])
@@ -44,7 +44,7 @@ def game():
                 if counter > 2:
                     print("You Lost, you have", counter - 1, "more attempts")
                 elif counter > 1:
-                        print("You Lost, you have",counter - 1, "more attempt")
+                    print("You Lost, you have",counter - 1, "more attempt")
                   
                 else:
                     print("You Lost")
