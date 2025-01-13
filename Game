@@ -1,20 +1,24 @@
 #Game of Rock Paper and Scissors against the Computer
+
 import random
 
 def game():
 
     counter = 3
     amount = 1
-    
+
+#Defining rules and user input
     while counter > 0:
         user = input("Rules- Type: 'rock' for rock, 'paper' for paper, and 'scissors' for scissors ")
-        
+
+#Corrects User if user mistypes, until they put in one of the options
         while user != 'rock' and user != 'paper' and user != 'scissors':
             user = input("Enter either 'rock', 'paper', 'scissors'")
-            
-        
+
+#Computer Choice
         comp = random.choice(['rock', 'paper', 'scissors'])
-    
+
+#User choice compared with Computer (TIE)
         if user == comp:
             if counter > 2:
                 print("You Tied, you have", counter - 1, "more attempts")
@@ -23,7 +27,8 @@ def game():
                   
             else:
                 print("You Tied")
-            
+
+#User choice compared with Computer (NOT TIE)     
         else:
             def winner(user, comp):
                 if (user == 'rock' and comp == 'scissors') or (user == 'scissors' and comp == 'paper') or (user == 'paper' and comp == 'rock'):
@@ -49,9 +54,3 @@ def game():
     if counter == 0:
         print('End')
 game()
-
-
-
-
-
-
